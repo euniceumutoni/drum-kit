@@ -6,7 +6,7 @@ document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     alert ("I got clicked!");
     //add more funciton uses
     var audio = new Audio("sounds/tom-1.mp3");
-    audio.play();
+    audio.play(); //adds sound to the drums when clicked
 });
 
 }
