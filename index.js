@@ -5,13 +5,15 @@ document.querySelectorAll(".drum")[i].addEventListener("click", function () {
    
     var buttonInnerHTML = this.innerHTML;
 
-    makeSound(buttonInnerHTML);
+    makeSound(buttonInnerHTML); // sound
+    buttonAnimation(buttonInnerHTML); // animation
 
 });
 }
 
 document.addEventListener("keypress", function (event){
-    makeSound(event.key);
+    makeSound(event.key); //  for the sound
+    buttonAnimation(event.key); //for the animation
 });
 
 function makeSound(key)  {
@@ -53,6 +55,18 @@ function makeSound(key)  {
             
     }
 };
+
+function buttonAnimation(currentKey) {
+
+    var activeButton = document.querySelector("." + currentKey);
+
+    activeButton.classList.add("pressed");
+
+    setTimeout(function () {
+        activeButton.classList.remove("pressed");
+    }, 200);
+
+}
 
 //added key press and click so they all work together
 
