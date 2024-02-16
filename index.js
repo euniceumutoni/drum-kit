@@ -5,15 +5,15 @@ document.querySelectorAll(".drum")[i].addEventListener("click", function () {
    
     var buttonInnerHTML = this.innerHTML;
 
-    makeSound(buttonInnerHTML); // sound
+    makeSound(buttonInnerHTML); // button sound
     buttonAnimation(buttonInnerHTML); // animation
 
 });
 }
 
 document.addEventListener("keypress", function (event){
-    makeSound(event.key); //  for the sound
-    buttonAnimation(event.key); //for the animation
+    makeSound(event.key); //  activates sound
+    buttonAnimation(event.key); //activates animation
 });
 
 function makeSound(key)  {
